@@ -1,0 +1,24 @@
+loginSuccess:
+    email: admin@example.com
+    password: password
+
+loginFail:
+    -
+        email: notexist@163.com
+        password: password
+    -
+        email: admin@example.com
+        password: password1234565
+    -
+        password: password1234565
+    -
+        email: admin@example.com
+    -
+        email: notexist@163.com%
+        password: password
+    -
+        email: notexist@163.com''
+        password: password
+
+
+

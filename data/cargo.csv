@@ -1,0 +1,19 @@
+weight,dimensions,destination,index
+20kg,10cm*20cm*30cm,Shen Zhen,1
+5,20mm*20mm*30mm,Hang Zhou,2
+15kg,5*10cm*cm,Tian Jin,3
+60lb,40cm*70cm*10mm,Nan Ning,4
+,40mm*70cm*10cm,,
+10kg,40cm*70mm*10mm,Nan Ning,5
+-1,10cm*20cm*cm,Shen Zhen,1
+%,,Shen Zhen,1
+',123,Shen Zhen,1
+10g,10cm*20cm*,Shen Zhen,1
+kg10,cm40*70mm*10mm,Shen Zhen,1
+kg,40mm-70cm-10cm,Shen Zhen,1
+10,40cm*70cm*10mm,Shen Zhen,1
+10kg,40mm*70cm*10cm,Shen Zhen,1
+11kg,40cm*70cm*10mm,Shen Zhen,1
+1.12233E+22,40mm*70cm*10cm,Shen Zhen,1
+null,40cm*70cm*10mm,Shen Zhen,1
+0kg,40mm*70cm*10cm,Shen Zhen,1

@@ -1,0 +1,247 @@
+valid_success:
+  data_path: ../data/cargo_success.csv
+  result: true
+
+index_none:
+  - weight: 20kg
+    dimensions: 10cm*20cm*30cm
+    destination: Shen Zhen
+    index:
+
+index_not_unique:
+  - weight: 60kg
+    dimensions: 40cm*70cm*10cm
+    destination: Nan Ning
+    index: 3
+  - weight: 11kg
+    dimensions: 40cm*70cm*10cm
+    destination: Nan Ning
+    index: 3
+
+dimensions_invalid:
+  - weight: 20kg
+    dimensions: 10cm*20cm*30cm
+    destination: Shen Zhen
+    index: 1
+    result: true
+  - weight: 5
+    dimensions: 20mm*20mm*30mm
+    destination: Hang Zhou
+    index: 2
+    result: true
+  - weight: 15kg
+    dimensions: 5*10cm*cm
+    destination: Tian Jin
+    index: 3
+    result: false
+  - weight: 60lb
+    dimensions: 40cm*70cm*10mm
+    destination: Nan Ning
+    index: 4
+    result: false
+  - weight: 40mm*70cm*10cm
+    dimensions:
+    destination:
+    index: 5
+    result: false
+  - weight: 10kg
+    dimensions: 40cm*70mm*10mm
+    destination: Nan Ning
+    index: 6
+    result: false
+  - weight: 10000
+    dimensions: 10cm*20cm*cm
+    destination: Shen Zhen
+    index: 7
+    result: false
+  - weight: 10000
+    dimensions: Shen Zhen
+    destination: 1
+    index: 9
+    result: false
+  - weight: 10000
+    dimensions: 123
+    destination: Shen Zhen
+    index: 10
+    result: false
+  - weight: 10000
+    dimensions: 10cm*20cm*
+    destination: Shen Zhen
+    index: 11
+    result: false
+  - weight: 10000
+    dimensions: cm40*70mm*10mm
+    destination: Shen Zhen
+    index: 12
+    result: false
+  - weight: 10000
+    dimensions: 40mm-70cm-10cm
+    destination: Shen Zhen
+    index: 13
+    result: false
+  - weight: 10000
+    dimensions:
+    destination: Shen Zhen
+    index: 13
+    result: false
+
+weight_invalid:
+  - weight: 20kg
+    dimensions: 10cm*20cm*30cm
+    destination: Shen Zhen
+    index: 1
+    result: true
+  - weight: 5
+    dimensions: 20mm*20mm*30mm
+    destination: Hang Zhou
+    index: 2
+    result: false
+  - weight: 15kg
+    dimensions: 5*10cm*cm
+    destination: Tian Jin
+    index: 3
+    result: true
+  - weight: 60lb
+    dimensions: 40cm*70cm*10mm
+    destination: Nan Ning
+    index: 4
+    result: false
+  - weight: 40mm*70cm*10cm
+    dimensions:
+    destination:
+    index:
+    result: false
+  - weight: 10kg
+    dimensions: 40cm*70mm*10mm
+    destination: Nan Ning
+    index: 5
+    result: false
+  - weight: -1
+    dimensions: 10cm*20cm*cm
+    destination: Shen Zhen
+    index: 1
+    result: false
+  - weight: 10%
+    dimensions: Shen Zhen
+    destination: 1
+    index:
+    result: false
+  - weight: 1'
+    dimensions: 123
+    destination: Shen Zhen
+    index: 1
+    result: false
+  - weight: 10g
+    dimensions: 10cm*20cm*
+    destination: Shen Zhen
+    index: 1
+    result: false
+  - weight: kg10
+    dimensions: cm40*70mm*10mm
+    destination: Shen Zhen
+    index: 1
+    result: false
+  - weight: kg
+    dimensions: 40mm-70cm-10cm
+    destination: Shen Zhen
+    index: 1
+    result: false
+  - weight: 10
+    dimensions: 40cm*70cm*10mm
+    destination: Shen Zhen
+    index: 1
+    result: false
+  - weight: 11kg
+    dimensions: 40cm*70cm*10mm
+    destination: Shen Zhen
+    index: 1
+    result: true
+  - weight: 1.12233E+22
+    dimensions: 40mm*70cm*10cm
+    destination: Shen Zhen
+    index: 1
+    result: false
+  - weight: null
+    dimensions: 40cm*70cm*10mm
+    destination: Shen Zhen
+    index: 1
+    result: false
+  - weight: 0kg
+    dimensions: 40mm*70cm*10cm
+    destination: Shen Zhen
+    index: 1
+    result: false
+
+destination_valid:
+  - weight: 20kg
+    dimensions: 10cm*20cm*30cm
+    destination: Shen Zhen
+    index: 1
+    result: true
+  - weight: 5
+    dimensions: 20mm*20mm*30mm
+    destination: Hang Zhou%%
+    index: 2
+    result: true
+  - weight: 5
+    dimensions: 20mm*20mm*30mm
+    destination: Hang''Zhou
+    index: 2
+    result: true
+  - weight: 5
+    dimensions: 20mm*20mm*30mm
+    destination: 1==1
+    index: 2
+    result: true
+  - weight: 5
+    dimensions: 20mm*20mm*30mm
+    destination:
+    index: 2
+    result: true
+
+valid_file_type:
+  -
+    data_path: cargo_success.txt
+    result: false
+  -
+    data_path: cargo_success.exe
+    result: false
+  -
+    data_path: cargo_success.xlsx
+    result: false
+  -
+    data_path: cargo_success.xls
+    result: false
+  -
+    data_path: cargo_success.xmind
+    result: false
+  -
+    data_path: cargo_success.csv
+    result: true
+
+form_head_valid:
+  - weight: 5
+    dimensions: 20mm*20mm*30mm
+    destination: Hang''Zhou
+    result: false
+  - weight: 5
+    destination: Hang''Zhou
+    index: 1
+    result: false
+  - destination: 5
+    dimensions: Hang''Zhou
+    index: 1
+    result: false
+  - weight: 5
+    dimensions: Hang''Zhou
+    index: 1
+    result: true
+  - weight: 5
+    index: 1
+    dimensions: 20mm*20mm*30mm
+    destination: Hang''Zhou
+    result: true
+
+
+
+

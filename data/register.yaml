@@ -1,0 +1,70 @@
+registerSuccess:
+    email: xxx
+    password: password
+    firstName: John
+    lastName: Smith
+
+registerExist:
+    -
+        email: admin@example.com
+        password: password
+        firstName: John
+        lastName: Smith
+
+registerNOEmail:
+    -
+        password: password
+        firstName: John
+        lastName: Smith
+
+registerFail:
+    -
+        email: admin
+        password: password
+        firstName: John
+        lastName: Smith
+    -
+        password: password
+        firstName: John
+        lastName: Smith
+    -
+        email: admin@example.com
+        password:
+        firstName: John
+        lastName: Smith
+        randomEmail: true
+    -
+        email: admin
+        firstName: John
+        lastName: Smith
+    -
+        email: admin
+        password: 123
+        firstName: John
+        lastName: Smith
+    -
+        email: admin
+        password: password
+        lastName: Smith
+    -
+        email: admin
+        password: password
+        firstName: John
+    -
+        email: admin
+        password: password
+        firstName: John
+        lastName: Smith
+        data: heihei
+    -
+        email: admin
+        password: password'%'
+        firstName: John
+        lastName: Smith
+    -
+        email: admin
+        password: passwor d
+        firstName: J ohn
+        lastName: Sm ith
+
+
